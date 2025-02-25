@@ -1,4 +1,5 @@
-def main():
+def main() -> None:
+    """Main Process of the application used on app start."""
     pass
 
 
