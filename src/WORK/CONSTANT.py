@@ -4,10 +4,10 @@ from UTILITY import logln_info
 # ---
 # Workspace paths
 # ---
-__SOURCE_FOLDER_PATH: str = os.path.dirname(__file__)
-__DATA_FOLDER_PATH: str = os.path.join(os.path.dirname(__file__), "DATA")
-__WORK_FOLDER_PATH: str = os.path.join(os.path.dirname(__file__), "WORK")
-__FLASK_FOLDER_PATH: str = os.path.join(os.path.dirname(__file__), "WORK")
+SOURCE_FOLDER_PATH: str = os.path.dirname(os.path.dirname(__file__))
+DATA_FOLDER_PATH: str = os.path.join(os.path.dirname(__file__), "DATA")
+WORK_FOLDER_PATH: str = os.path.join(os.path.dirname(__file__), "WORK")
+FLASK_FOLDER_PATH: str = os.path.join(os.path.dirname(__file__), "WORK")
 
 
 # ---
