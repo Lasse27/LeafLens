@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +7,7 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 body {
     display: flex;
     align-items: center;
@@ -15,262 +17,76 @@ body {
     font-family: "Poppins", sans-serif;
     background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
 }
+
 .container {
     max-width: 800px;
     background: #fff;
     width: 800px;
-    padding: 25px 40px 10px 40px;
+    padding: 10px 40px 10px 40px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
 .container .text {
     text-align: center;
     font-size: 41px;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
-    background: -webkit-linear-gradient(
-        right,
-        #56d8e4,
-        #9f01ea,
-        #56d8e4,
-        #9f01ea
-    );
+    background: -webkit-linear-gradient(right,
+            #56d8e4,
+            #9f01ea,
+            #56d8e4,
+            #9f01ea);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
-.container form {
-    padding: 30px 0 0 0;
-}
-.container form .form-row {
-    display: flex;
-    margin: 32px 0;
-}
-form .form-row .input-data {
-    width: 100%;
-    height: 40px;
-    margin: 0 20px;
-    position: relative;
-}
-form .form-row .textarea {
-    height: 70px;
-}
-.input-data input,
-.textarea textarea {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: none;
-    font-size: 17px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
-}
-.input-data input:focus ~ label,
-.textarea textarea:focus ~ label,
-.input-data input:valid ~ label,
-.textarea textarea:valid ~ label {
-    transform: translateY(-20px);
-    font-size: 14px;
-    color: #3498db;
-}
-.textarea textarea {
-    resize: none;
-    padding-top: 10px;
-}
-.input-data label {
-    position: absolute;
-    pointer-events: none;
-    bottom: 10px;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-.textarea label {
-    width: 100%;
-    bottom: 40px;
-    background: #fff;
-}
-.input-data .underline {
-    position: absolute;
-    bottom: 0;
-    height: 2px;
-    width: 100%;
-}
-.input-data .underline:before {
-    position: absolute;
-    content: "";
-    height: 2px;
-    width: 100%;
-    background: #3498db;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.3s ease;
-}
-.input-data input:focus ~ .underline:before,
-.input-data input:valid ~ .underline:before,
-.textarea textarea:focus ~ .underline:before,
-.textarea textarea:valid ~ .underline:before {
-    transform: scale(1);
-}
-.submit-btn .input-data {
-    overflow: hidden;
-    height: 45px !important;
-    width: 25% !important;
-}
-.submit-btn .input-data .inner {
-    height: 100%;
-    width: 300%;
-    position: absolute;
-    left: -100%;
-    background: -webkit-linear-gradient(
-        right,
-        #56d8e4,
-        #9f01ea,
-        #56d8e4,
-        #9f01ea
-    );
-    transition: all 0.4s;
-}
-.submit-btn .input-data:hover .inner {
-    left: 0;
-}
-.submit-btn .input-data input {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
-}
-@media (max-width: 700px) {
-    .container .text {
-        font-size: 30px;
-    }
-    .container form {
-        padding: 10px 0 0 0;
-    }
-    .container form .form-row {
-        display: block;
-    }
-    form .form-row .input-data {
-        margin: 35px 0 !important;
-    }
-    .submit-btn .input-data {
-        width: 40% !important;
-    }
+
+.container .text_small {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+    background: -webkit-linear-gradient(right,
+            #56d8e4,
+            #9f01ea,
+            #56d8e4,
+            #9f01ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.file-upload {
-    background-color: #ffffff;
-    width: 600px;
+.image-preview-container {
+    width: 50%;
     margin: 0 auto;
-    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    border-radius: 20px;
 }
 
-.file-upload-btn {
+.image-preview-container img {
     width: 100%;
-    margin: 0;
-    color: #fff;
-    background: #1fb264;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    border-bottom: 4px solid #15824b;
-    transition: all 0.2s ease;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-.file-upload-btn:hover {
-    background: #1aa059;
-    color: #ffffff;
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-
-.file-upload-btn:active {
-    border: 0;
-    transition: all 0.2s ease;
-}
-
-.file-upload-content {
     display: none;
+    margin-bottom: 30px;
+}
+
+.image-preview-container button {
+    display: inline-block;
+    width: 45%;
+    height: 45px;
+    margin-top: 10%;
+    margin-left: 25%;
     text-align: center;
-}
-
-.file-upload-input {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    outline: none;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.image-upload-wrap {
-    margin-top: 20px;
-    border: 4px dashed #1fb264;
-    position: relative;
-}
-
-.image-dropping,
-.image-upload-wrap:hover {
-    background-color: #1fb264;
-    border: 4px dashed #ffffff;
-}
-
-.image-title-wrap {
-    padding: 0 15px 15px 15px;
-    color: #222;
-}
-
-.drag-text {
-    text-align: center;
-}
-
-.drag-text h3 {
-    font-weight: 100;
-    text-transform: uppercase;
-    color: #15824b;
-    padding: 60px 0;
-}
-
-.file-upload-image {
-    max-height: 200px;
-    max-width: 200px;
-    margin: auto;
-    padding: 20px;
-}
-
-.remove-image {
-    width: 200px;
-    margin: 0;
+    background: #8338ec;
     color: #fff;
-    background: #cd4535;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    border-bottom: 4px solid #b02818;
-    transition: all 0.2s ease;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-.remove-image:hover {
-    background: #c13b2a;
-    color: #ffffff;
-    transition: all 0.2s ease;
+    font-size: 15px;
+    text-transform: Uppercase;
+    font-weight: 400;
+    border-radius: 5px;
     cursor: pointer;
-}
-
-.remove-image:active {
-    border: 0;
-    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* default boilerplate to center input */
